@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0f172a;
+    color: #e5e7eb;
+}
+
+/* Navbar */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(15, 23, 42, 0.95);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 80px;
+}
+
+.logo {
+    font-size: 28px;
+    color: #7c3aed;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    color: #e5e7eb;
+    text-decoration: none;
+    position: relative;
+    transition: 0.3s;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #7c3aed;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Hero */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation: fadeIn 1.5s ease;
+}
+
+.hero h1 {
+    font-size: 48px;
+}
+
+.hero span {
+    color: #7c3aed;
+}
+
+.hero .sub {
+    opacity: 0.8;
+    margin-top: 5px;
+}
+
+.btn {
+    margin-top: 30px;
+    padding: 14px 36px;
+    border-radius: 30px;
+    background: #7c3aed;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(124, 58, 237, 0.4);
+}
+
+/* Sections */
+section {
+    padding: 90px 120px;
+}
+
+section h2 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #7c3aed;
+}
+
+/* About */
+.about p {
+    max-width: 800px;
+    margin: 15px auto;
+    line-height: 1.8;
+    text-align: center;
+}
+
+/* Skills */
+.skill-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.skill {
+    padding: 15px 35px;
+    border: 2px solid #7c3aed;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.skill:hover {
+    background: #7c3aed;
+    transform: scale(1.08);
+}
+
+/* Projects */
+.project-card {
+    background: #020617;
+    max-width: 800px;
+    margin: 25px auto;
+    padding: 30px;
+    border-radius: 18px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(124, 58, 237, 0.25);
+}
+
+/* Contact */
+.contact p {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    background: #020617;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.achievements {
+    background: #020617;
+}
+
+.achieve-card {
+    max-width: 850px;
+    margin: 25px auto;
+    padding: 30px;
+    background: #0f172a;
+    border-left: 5px solid #7c3aed;
+    border-radius: 15px;
+    transition: 0.4s;
+}
+
+.achieve-card h3 {
+    color: #7c3aed;
+    margin-bottom: 10px;
+}
+
+.achieve-card:hover {
+    transform: translateX(12px);
+    box-shadow: 0 15px 35px rgba(124, 58, 237, 0.3);
+}
